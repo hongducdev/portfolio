@@ -28,7 +28,7 @@ const Information = () => {
         </h2>
         <Link
           href="mailto:hey@hongducdev.com"
-          className="text-3xl font-medium bg-ctp-green text-ctp-surface0 px-8 py-6 rounded-full"
+          className="text-3xl font-medium bg-ctp-green text-ctp-surface0 px-8 py-6 rounded-full hover:brightness-110 transition-all duration-300 ease-in-out"
         >
           hey@hongducdev.com
         </Link>
