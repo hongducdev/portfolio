@@ -1,4 +1,5 @@
 import Information from "@/components/Information";
+import InformationMore from "@/components/InformationMore";
 import { Social } from "@/components/Social";
 import { socialList } from "@/utils/social";
 
@@ -7,6 +8,7 @@ const HomePage = () => {
     <section>
       <Information />
       <Social items={socialList} speed="normal" />
+      <InformationMore />
     </section>
   );
 };

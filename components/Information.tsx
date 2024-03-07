@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Icon1 from "./Icon1";
 import Link from "next/link";
+import { Icon1 } from "./Icon";
 
 const Information = () => {
   return (
