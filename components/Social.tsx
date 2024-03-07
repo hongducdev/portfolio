@@ -4,8 +4,9 @@ import { ISocial } from "@/interfaces/social";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-export const Social = ({
+const Social = ({
   items,
   direction = "left",
   speed = "fast",
@@ -68,32 +69,39 @@ export const Social = ({
     }
   };
   return (
-    <div
-      ref={containerRef}
-      className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
-        className
-      )}
-    >
-      <ul
-        ref={scrollerRef}
+    <AnimatePresence>
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        ref={containerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-2 py-4 w-max flex-nowrap",
-          start && "animate-scroll ",
-          pauseOnHover && "hover:[animation-play-state:paused]"
+          "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+          className
         )}
       >
-        {items.map((item, idx) => (
-          <li
-            className="bg-ctp-surface0 w-[200px] flex items-center justify-center px-6 py-4 rounded-full"
-            key={item.label}
-          >
-            <Link href={item.link} className="">
-              {item.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+        <ul
+          ref={scrollerRef}
+          className={cn(
+            " flex min-w-full shrink-0 gap-2 py-4 w-max flex-nowrap",
+            start && "animate-scroll ",
+            pauseOnHover && "hover:[animation-play-state:paused]"
+          )}
+        >
+          {items.map((item, idx) => (
+            <li
+              className="bg-ctp-surface0 w-[200px] flex items-center justify-center px-6 py-4 rounded-full"
+              key={item.label}
+            >
+              <Link href={item.link} className="">
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </motion.div>
+    </AnimatePresence>
   );
 };
+
+export default Social;

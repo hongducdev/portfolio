@@ -1,9 +1,20 @@
+"use client";
 import React from "react";
 import { Icon2 } from "./Icon";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const InformationMore = () => {
+  const { ref, inView } = useInView();
+
   return (
-    <section className="flex gap-2">
+    <motion.section
+      className="flex gap-2"
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div className="basis-2/5 bg-ctp-surface0 px-12 py-10 rounded-3xl">
         <Icon2 />
         <h2 className="font-medium text-[56px] leading-none mt-8">
@@ -24,7 +35,7 @@ const InformationMore = () => {
           </span>
         </h3>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
