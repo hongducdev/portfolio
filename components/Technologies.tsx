@@ -18,7 +18,7 @@ const Technologies = () => {
         animate={{ y: inView ? 0 : 50, opacity: inView ? 1 : 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <h3 className="font-medium text-5xl">🧑‍💻the technologies I use.</h3>
+        <h3 className="font-medium text-5xl">🧑‍💻 the technologies I use.</h3>
       </motion.div>
 
       <ul className="mt-2 text-3xl flex flex-col gap-y-2">
