@@ -7,6 +7,22 @@ body {
   scroll-behavior: smooth;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #313244;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a6e3a1;
+  border-radius: 10px;
+}
+
 .group:hover .move-diagonally {
   transform: translate(20px, -20px);
   transition-delay: 0.2s;
