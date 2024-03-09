@@ -35,8 +35,8 @@ const Header = () => {
                 <Link
                   href={link.href}
                   className={`${
-                    link.isActive ? "text-ctp-text" : "text-ctp-overlay1"
-                  } px-6 text-ctp-overlay1 hover:text-ctp-text duration-300 transition-colors ease-in-out`}
+                    link.isActive ? "text-ctp-text" : "text-ctp-overlay2"
+                  } px-6 hover:text-ctp-text duration-300 transition-colors ease-in-out`}
                 >
                   {link.label}
                 </Link>

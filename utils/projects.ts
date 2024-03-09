@@ -4,7 +4,7 @@ export const Projects: IProject[] = [
   {
     title: "chill with me.",
     description: "developed with Next.js, Tailwind CSS.",
-    image: "/chill-with-me.png",
+    image: "/chill-with-me.webp",
     link: "https://lofi-nine.vercel.app/",
   },
   {
