@@ -16,12 +16,12 @@ const Project = ({ title, description, image, link }: IProject) => {
       className="w-full bg-ctp-surface0 rounded-3xl group"
     >
       <Link href={link}>
-        <div className="px-12 py-10 flex items-center justify-between">
+        <div className="p-8 lg:px-12 lg:py-10 flex items-center justify-between">
           <div>
             <h4 className="font-medium text-[40px]">{title}</h4>
             <p className="text-2xl text-ctp-overlay1">{description}</p>
           </div>
-          <div className="w-20 h-20 rounded-full flex items-center justify-center transition-all duration-500 bg-ctp-base group-hover:bg-ctp-overlay0 move-diagonally group-hover:text-ctp-text">
+          <div className="w-20 h-20 rounded-full lg:flex items-center justify-center transition-all duration-500 bg-ctp-base group-hover:bg-ctp-overlay0 move-diagonally group-hover:text-ctp-text hidden">
             <Icon3 />
           </div>
         </div>

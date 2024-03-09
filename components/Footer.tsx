@@ -15,10 +15,12 @@ const Footer = () => {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="bg-ctp-surface0 w-full px-8 py-4 rounded-full flex items-center justify-between font-medium text-lg"
     >
-      <Link href="/">
+      <Link href="/" className="flex-1">
         <span className="">hongducdev.</span>
       </Link>
-      <span className="text-ctp-overlay1">all rights reserved. © 2024</span>
+      <span className="text-ctp-overlay1 text-xs">
+        all rights reserved. © 2024
+      </span>
     </motion.footer>
   );
 };

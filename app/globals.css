@@ -27,3 +27,11 @@ body {
   transform: translate(20px, -20px);
   transition-delay: 0.2s;
 }
+
+::-moz-selection { /* Code for Firefox */
+  @apply text-ctp-surface0 bg-ctp-green;
+}
+
+::selection {
+  @apply text-ctp-surface0 bg-ctp-green;
+}

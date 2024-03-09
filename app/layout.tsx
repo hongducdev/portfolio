@@ -57,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="max-w-[1240px] w-full mx-auto flex flex-col gap-y-2">
+        <div className="max-w-screen px-2 lg:px-0 lg:max-w-[1240px] w-full mx-auto flex flex-col gap-y-2">
           <Header />
           {children}
           <Footer />
