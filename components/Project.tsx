@@ -31,7 +31,6 @@ const Project = ({ title, description, image, link }: IProject) => {
             alt={title}
             width={1920}
             height={1080}
-            layout="responsive"
             className="rounded-2xl group-hover:scale-105 transition-all duration-500 ease-in-out"
           />
         </div>

@@ -1,4 +1,4 @@
-"use client";
+"use cdivent";
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -23,9 +23,9 @@ const Technologies = () => {
         </h3>
       </motion.div>
 
-      <ul className="mt-2 text-3xl flex flex-col gap-y-2">
+      <div className="mt-2 text-3xl flex flex-col gap-y-2">
         <div className="flex lg:gap-x-2 flex-col lg:flex-row gap-y-2">
-          <motion.li
+          <motion.div
             className="lg:basis-3/5 bg-ctp-surface0 p-8 lg:px-12 lg:py-10 rounded-3xl flex items-center gap-10 justify-between"
             ref={ref}
             initial={{ x: -50, opacity: 0 }}
@@ -36,8 +36,8 @@ const Technologies = () => {
             <span className="font-medium text-4xl lg:text-6xl">
               TailwindCSS
             </span>
-          </motion.li>
-          <motion.li
+          </motion.div>
+          <motion.div
             className="lg:basis-2/5 bg-ctp-surface0 p-8 lg:px-12 lg:py-10 rounded-3xl flex items-center gap-10 justify-between"
             ref={ref}
             initial={{ x: 50, opacity: 0 }}
@@ -46,10 +46,10 @@ const Technologies = () => {
           >
             <RiReactjsFill className="text-9xl" />
             <span className="font-medium text-4xl lg:text-6xl">ReactJS</span>
-          </motion.li>
+          </motion.div>
         </div>
         <div className="flex lg:gap-x-2 flex-col lg:flex-row gap-y-2">
-          <motion.li
+          <motion.div
             className="lg:basis-2/5 bg-ctp-surface0 p-8 lg:px-12 lg:py-10 rounded-3xl flex items-center gap-10 justify-between"
             ref={ref}
             initial={{ x: -50, opacity: 0 }}
@@ -58,8 +58,8 @@ const Technologies = () => {
           >
             <SiNodedotjs className="text-9xl" />
             <span className="font-medium text-4xl lg:text-6xl">NodeJS</span>
-          </motion.li>
-          <motion.li
+          </motion.div>
+          <motion.div
             className="lg:basis-3/5 bg-ctp-surface0 p-8 lg:px-12 lg:py-10 rounded-3xl flex items-center gap-10 justify-between"
             ref={ref}
             initial={{ x: 50, opacity: 0 }}
@@ -68,9 +68,9 @@ const Technologies = () => {
           >
             <SiExpress className="text-9xl" />
             <span className="font-medium text-4xl lg:text-6xl">ExpressJS</span>
-          </motion.li>
+          </motion.div>
         </div>
-      </ul>
+      </div>
     </section>
   );
 };
