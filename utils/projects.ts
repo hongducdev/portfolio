@@ -10,7 +10,7 @@ export const Projects: IProject[] = [
   {
     title: "hdd.hn.",
     description: "developed with Next.js, Tailwind CSS.",
-    image: "/hdd-hn.png",
+    image: "/hdd-hn.webp",
     link: "https://hdd-hn.vercel.app/",
   }
 ];
