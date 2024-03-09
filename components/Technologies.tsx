@@ -16,7 +16,7 @@ const Technologies = () => {
         ref={ref}
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: inView ? 0 : 50, opacity: inView ? 1 : 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
       >
         <h3 className="font-medium text-[32px] lg:text-5xl">
           🧑‍💻 the technologies I use.
@@ -28,9 +28,9 @@ const Technologies = () => {
           <motion.div
             className="lg:basis-3/5 bg-ctp-surface0 p-8 lg:px-12 lg:py-10 rounded-3xl flex items-center gap-10 justify-between"
             ref={ref}
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: inView ? 0 : -50, opacity: inView ? 1 : 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: inView ? 0 : 50, opacity: inView ? 1 : 0 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <BiLogoTailwindCss className="text-9xl" />
             <span className="font-medium text-4xl lg:text-6xl">
@@ -40,9 +40,9 @@ const Technologies = () => {
           <motion.div
             className="lg:basis-2/5 bg-ctp-surface0 p-8 lg:px-12 lg:py-10 rounded-3xl flex items-center gap-10 justify-between"
             ref={ref}
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: inView ? 0 : 50, opacity: inView ? 1 : 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: inView ? 0 : 50, opacity: inView ? 1 : 0 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <RiReactjsFill className="text-9xl" />
             <span className="font-medium text-4xl lg:text-6xl">ReactJS</span>
@@ -52,9 +52,9 @@ const Technologies = () => {
           <motion.div
             className="lg:basis-2/5 bg-ctp-surface0 p-8 lg:px-12 lg:py-10 rounded-3xl flex items-center gap-10 justify-between"
             ref={ref}
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: inView ? 0 : -50, opacity: inView ? 1 : 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: inView ? 0 : 50, opacity: inView ? 1 : 0 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <SiNodedotjs className="text-9xl" />
             <span className="font-medium text-4xl lg:text-6xl">NodeJS</span>
@@ -62,9 +62,9 @@ const Technologies = () => {
           <motion.div
             className="lg:basis-3/5 bg-ctp-surface0 p-8 lg:px-12 lg:py-10 rounded-3xl flex items-center gap-10 justify-between"
             ref={ref}
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: inView ? 0 : 50, opacity: inView ? 1 : 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: inView ? 0 : 50, opacity: inView ? 1 : 0 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <SiExpress className="text-9xl" />
             <span className="font-medium text-4xl lg:text-6xl">ExpressJS</span>

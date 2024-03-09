@@ -13,7 +13,9 @@ const HomePage = () => {
   return (
     <section className="flex flex-col gap-y-2">
       <Information />
-      <Social items={socialList} speed="normal" />
+      <div className="max-w-screen lg:max-w-screen flex items-center justify-center">
+        <Social items={socialList} speed="normal" />
+      </div>
       <InformationMore />
       <Technologies />
       <section className="flex flex-col gap-y-2" id="projects">
