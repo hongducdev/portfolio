@@ -4,10 +4,12 @@ import Information from "@/components/Information";
 import InformationMore from "@/components/InformationMore";
 import Social from "@/components/Social";
 import { socialList } from "@/utils/social";
-import Technologies from "@/components/Technologies";
 import Project from "@/components/Project";
 import { Projects } from "@/utils/projects";
 import Contact from "@/components/Contact";
+import TechHeader from "@/components/Technologies/TechHeader";
+import TechBody from "@/components/Technologies/TechBody";
+import TechFooter from "@/components/Technologies/TechFooter";
 
 const HomePage = () => {
   return (
@@ -17,12 +19,14 @@ const HomePage = () => {
         <Social items={socialList} speed="normal" />
       </div>
       <InformationMore />
-      <Technologies />
+      <TechHeader />
+      <TechBody />
+      <TechFooter />
       <section className="flex flex-col gap-y-2" id="projects">
         {Projects.map((project, index) => (
           <Project key={index} {...project} />
         ))}
-      </section>
+      TeT</section>
       <Contact />
     </section>
   );
