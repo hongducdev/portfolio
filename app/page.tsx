@@ -26,7 +26,7 @@ const HomePage = () => {
         {Projects.map((project, index) => (
           <Project key={index} {...project} />
         ))}
-      TeT</section>
+      </section>
       <Contact />
     </section>
   );

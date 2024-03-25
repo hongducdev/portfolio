@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
         height: 1080,
       },
     ],
-    locale: "en-US",
+    locale: "vi_VN",
     type: "website",
   },
   robots: {
@@ -49,6 +50,33 @@ export const metadata: Metadata = {
   },
 };
 
+const ldJson = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Vietnam",
+    addressRegion: "Yen Bai",
+    postalCode: "33000",
+    streetAddress: "Group 5, Dong Tam Ward, Yen Bai City",
+  },
+  colleague: ["https://www.datdev.click/"],
+  email: "hey@hongducdev.com",
+  image: "https://avatars.githubusercontent.com/u/73995275?v=4",
+  jobTitle: "Software Engineer",
+  name: "Nguyen Hong Duc",
+  birthPlace: "Yen Bai, Vietnam",
+  birthDate: "2002-10-05",
+  gender: "male",
+  nationality: "Vietnamese",
+  url: "https://hongducdev.com",
+  sameAs: [
+    "https://www.facebook.com/hongduc.dev/",
+    "https://www.linkedin.com/in/hongducdev/",
+    "https://github.com/hongducdev",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -62,6 +90,13 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <Script
+          id="ld+json"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(ldJson),
+          }}
+        />
       </body>
     </html>
   );
