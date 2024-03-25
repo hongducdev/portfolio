@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Icon1 = () => {
   return (
     <svg
@@ -53,4 +51,4 @@ export const Icon3 = () => {
       ></path>
     </svg>
   );
-}
+};

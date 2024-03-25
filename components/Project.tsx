@@ -1,7 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Icon3 } from "./Icon";
 import { IProject } from "@/interfaces/projects";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 

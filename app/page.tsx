@@ -1,11 +1,11 @@
 "use client";
-import React from "react";
+import { socialList } from "@/utils/social";
+import { Projects } from "@/utils/projects";
+
 import Information from "@/components/Information";
 import InformationMore from "@/components/InformationMore";
 import Social from "@/components/Social";
-import { socialList } from "@/utils/social";
 import Project from "@/components/Project";
-import { Projects } from "@/utils/projects";
 import Contact from "@/components/Contact";
 import TechHeader from "@/components/Technologies/TechHeader";
 import TechBody from "@/components/Technologies/TechBody";

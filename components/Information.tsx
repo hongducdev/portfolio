@@ -1,9 +1,9 @@
 "use client";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Icon1 } from "./Icon";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Icon1 } from "./Icon";
 
 const Information = () => {
   const { ref, inView } = useInView();

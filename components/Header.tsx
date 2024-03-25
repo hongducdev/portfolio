@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { HeaderLinks } from "@/utils/headerLinks";
+import { motion, AnimatePresence } from "framer-motion";
 import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
+import { HeaderLinks } from "@/utils/headerLinks";
 
 const Header = () => {
   const [open, setOpen] = useState(false);

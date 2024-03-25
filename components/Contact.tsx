@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { Icon1 } from "./Icon";
 import Link from "next/link";
 import { motion } from "framer-motion";
