@@ -22,6 +22,7 @@ export const GET = async () => {
 };
 
 export const POST = async (req: Request) => {
+
   const session = await getServerSession(authOptions);
 
   if (!session) {
