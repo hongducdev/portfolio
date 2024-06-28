@@ -32,7 +32,7 @@ const SocialLinks: ISocialLink[] = [
 
 const MainPage = () => {
   return (
-    <div className="text-zinc-600 max-w-2xl w-full mx-auto">
+    <div >
       <h1 className="font-semibold text-4xl">Hello, World!</h1>
       <p className="text-xl mt-10 leading-loose">
         Hi, my name is hongducdev. Full name is Nguyen Hong Duc. I am a 4th year

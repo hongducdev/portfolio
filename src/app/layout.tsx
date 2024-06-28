@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import NextAuthProvider from "@/components/provider";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -19,11 +20,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
-        <div className="bg-zinc-50 antialiased bg-dot-zinc-400/[0.2] w-full min-h-screen">
-          <Navbar />
-          <div className="p-4 lg:p-8">{children}</div>
-          <Footer />
-        </div>
+        <NextAuthProvider>
+          <div className="bg-zinc-50 antialiased bg-dot-zinc-400/[0.2] w-full min-h-screen">
+            <Navbar />
+            <div className="p-4 lg:p-8 ">
+              <div className="text-zinc-600 max-w-2xl w-full mx-auto">
+                {children}
+              </div>
+            </div>
+            <Footer />
+          </div>
+        </NextAuthProvider>
       </body>
     </html>
   );

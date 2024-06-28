@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { RiGithubLine, RiThreadsLine } from "react-icons/ri";
 import { Button } from "./ui/button";
+import { useSession } from "next-auth/react";
+import UserLogged from "./user-logged";
 
 interface INavbarItem {
   label?: string;
@@ -28,6 +32,8 @@ const NavbarList: INavbarItem[] = [
 ];
 
 const Navbar = () => {
+  const { status, data: session } = useSession();
+
   return (
     <nav className="p-4 lg:p-8 flex items-center justify-between">
       <Link href="/" className="font-semibold text-2xl text-zinc-900">
@@ -51,9 +57,15 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <Button>
-          <Link href="/login">Login</Link>
-        </Button>
+        <div className="flex items-center">
+          {status === "authenticated" ? (
+            <UserLogged />
+          ) : (
+            <Button>
+              <Link href="/login">Login</Link>
+            </Button>
+          )}
+        </div>
       </div>
     </nav>
   );
