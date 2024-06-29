@@ -21,7 +21,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center h-[calc(100vh-260px)]">
       <Card className="mx-auto max-w-sm w-full">
         <CardHeader>
           <CardTitle>

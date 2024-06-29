@@ -23,7 +23,9 @@ const UserLogged = () => {
         <AvatarUser size="small" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuLabel>Tài khoản</DropdownMenuLabel>
+        <DropdownMenuLabel>
+          Account
+        </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <div className="flex flex-col px-2 py-1.5 ">
           <span className="text-sm font-medium">{session.user?.name}</span>
@@ -35,7 +37,7 @@ const UserLogged = () => {
         <DropdownMenuItem asChild>
           <Button onClick={() => signOut()} className="w-full">
             <LogOut className="mr-2 h-4 w-4" />
-            <span>Đăng xuất</span>
+            <span>Logout</span>
           </Button>
         </DropdownMenuItem>
       </DropdownMenuContent>

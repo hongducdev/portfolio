@@ -1,5 +1,12 @@
 import Link from "next/link";
 import { RiGithubLine, RiLinkedinBoxLine, RiThreadsLine, RiTwitterXLine } from "react-icons/ri";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Hi, my name is hongducdev. Full name is Nguyen Hong Duc. I am a 4th year student majoring in Software Engineering at ICTU. I am a Front end developer and am striving to become a Fullstack developer.",
+};
+ 
 
 interface ISocialLink {
   label: string;
