@@ -69,6 +69,15 @@ const MainPage = () => {
             </Link>
           ))}
         </div>
+        <p className="text-xl mt-5">
+          If you have any questions, please email me at{" "}
+          <Link
+            href="mailto:hey@hongducdev.com"
+            className=" text-zinc-500 font-medium hover:text-zinc-800 relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-zinc-500 after:transition-all after:duration-300 hover:after:bg-zinc-800 after:ease-in-out after:transform after:scale-x-100 after:origin-left"
+          >
+            <span className="text-lg">hey@hongducdev.com</span>
+          </Link>
+        </p>
       </div>
     </div>
   );

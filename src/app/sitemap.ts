@@ -7,14 +7,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const tags = await getTags();
 
   const postsEntries = posts.map((post: Post) => ({
-    url: `${process.env.BASE_URL}/post/${post.slug}`,
+    url: `${process.env.BASE_URL}/blogs/${post.slug}`,
     lastModified: post.updatedAt,
     changeFrequency: "weekly",
     priority: 0.8,
   }));
 
   const tagsEntries = tags.map((tag: Tag) => ({
-    url: `${process.env.BASE_URL}/tag/${tag.tagName}`,
+    url: `${process.env.BASE_URL}/blogs/tags/${tag.tagName}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.5,
@@ -26,6 +26,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
+    },
+    {
+      url: `${process.env.BASE_URL}/projects`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${process.env.BASE_URL}/blogs`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     ...postsEntries,
     ...tagsEntries,
