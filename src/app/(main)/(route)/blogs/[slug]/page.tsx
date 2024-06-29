@@ -9,6 +9,7 @@ import { Lexend } from "next/font/google";
 import NavPageDetail from "@/components/nav-page-detail";
 import Link from "next/link";
 import MarkdownRender from "@/components/markdown-render";
+import CommentInput from "@/components/comment/comment-input";
 
 const lexand = Lexend({ subsets: ["latin"] });
 
@@ -113,13 +114,13 @@ const PostDetailPage = async ({ params }: BlogPageProps) => {
           </article>
           </section>
 
-          {/* <div className="max-w-7xl w-full mx-auto px-2 xl:px-0">
-          <h3 className="text-xl font-semibold">Bìn luận</h3>
+          <div className="w-full mx-auto px-2 xl:px-0">
+          <h3 className="text-xl font-semibold">Comments</h3>
           <div className="w-full h-[1px] bg-input"></div>
           <div className="mt-4">
             <CommentInput postId={postPage.id} slug={params.slug} />
           </div>
-        </div> */}
+        </div>
         </div>
       </div>
     );
