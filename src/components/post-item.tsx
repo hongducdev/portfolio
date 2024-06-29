@@ -11,7 +11,7 @@ const PostItem = ({ post }: { post: Post }) => {
         <span>{post.icon}</span>
         <Link
           href={`/blogs/${post.slug}`}
-          className="font-semibold hover:underline"
+          className="font-semibold hover:underline line-clamp-1"
         >
           {post.title}
         </Link>
