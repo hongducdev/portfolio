@@ -1,7 +1,12 @@
 import { Tag } from "@prisma/client";
 import Link from "next/link";
 
-const TagItem = ({ tag, isActive }: { tag: Tag; isActive: boolean }) => {
+interface TagItemProps {
+  tag: Tag;
+  isActive?: boolean;
+}
+
+const TagItem = ({ tag, isActive }: TagItemProps) => {
   return (
     <Link
       href={`/blogs/tags/${tag.tagName}`}
