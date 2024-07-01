@@ -128,16 +128,6 @@ const EditForm = ({ params }: EditFormProps) => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsLoading(true);
     try {
-      // const response = await axios.put(`/api/post-admin/${post?.id}`, {
-      //   thumbnail: values.thumbnail,
-      //   title: values.title,
-      //   slug: values.slug,
-      //   icon: values.icon,
-      //   tag: values.tag,
-      //   content: values.content,
-      //   shortDesc: values.shortDesc,
-      // });
-
       const response = await fetch(`/api/post-admin/${post?.id}`, {
         method: "PUT",
         headers: {
