@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "hongducdev",
-      url: "https://hongducdev.com",
+      url: "https://www.hongducdev.com",
     },
   ],
   creator: "hongducdev",
