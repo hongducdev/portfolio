@@ -1,24 +1,24 @@
 import { MetadataRoute } from "next";
-import { getPublishedPosts, getTags } from "@/apis";
-import { Post, Tag } from "@prisma/client";
+// import { getPublishedPosts, getTags } from "@/apis";
+// import { Post, Tag } from "@prisma/client";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const posts = await getPublishedPosts();
-  const tags = await getTags();
+  // const posts = await getPublishedPosts();
+  // const tags = await getTags();
 
-  const postsEntries = posts.map((post: Post) => ({
-    url: `${process.env.BASE_URL}/blogs/${post.slug}`,
-    lastModified: post.updatedAt,
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
+  // const postsEntries = posts.map((post: Post) => ({
+  //   url: `${process.env.BASE_URL}/blogs/${post.slug}`,
+  //   lastModified: post.updatedAt,
+  //   changeFrequency: "weekly",
+  //   priority: 0.8,
+  // }));
 
-  const tagsEntries = tags.map((tag: Tag) => ({
-    url: `${process.env.BASE_URL}/blogs/tags/${tag.tagName}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.5,
-  }));
+  // const tagsEntries = tags.map((tag: Tag) => ({
+  //   url: `${process.env.BASE_URL}/blogs/tags/${tag.tagName}`,
+  //   lastModified: new Date(),
+  //   changeFrequency: "weekly",
+  //   priority: 0.5,
+  // }));
 
   return [
     {
@@ -39,7 +39,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.9,
     },
-    ...postsEntries,
-    ...tagsEntries,
+    // ...postsEntries,
+    // ...tagsEntries,
   ];
 }
