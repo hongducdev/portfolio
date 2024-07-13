@@ -60,13 +60,10 @@ const TagPage = async ({ params }: TagPageProps) => {
   try {
     const tags = await fetchTags();
     if (!tags || tags.length === 0) {
-      notFound();
+      return <div>No tags found.</div>;
     }
 
     const posts: Post[] = await getPostsByTag(params.tagName);
-    if (!posts || posts.length === 0) {
-      notFound();
-    }
 
     return (
       <div>
@@ -80,15 +77,21 @@ const TagPage = async ({ params }: TagPageProps) => {
           ))}
         </div>
         <div className="flex flex-col gap-5 mt-8">
-          {posts.map((post: Post) => (
-            <PostItem key={post.id} post={post} />
-          ))}
+          {posts.length > 0 ? (
+            posts.map((post: Post) => <PostItem key={post.id} post={post} />)
+          ) : (
+            <div>No posts found for this tag.</div>
+          )}
         </div>
       </div>
     );
   } catch (error) {
     console.error("Error fetching post page:", error);
-    notFound();
+    return (
+      <div>
+        An error occurred while fetching the page. Please try again later.
+      </div>
+    );
   }
 };
 
