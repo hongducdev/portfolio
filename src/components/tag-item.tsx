@@ -9,7 +9,7 @@ interface TagItemProps {
 const TagItem = ({ tag, isActive }: TagItemProps) => {
   return (
     <Link
-      href={`/blogs/tags/${tag.tagName}`}
+      href={`/tags/${tag.tagName}`}
       className={`${
         isActive
           ? "bg-zinc-600 text-zinc-100 hover:bg-zinc-700"

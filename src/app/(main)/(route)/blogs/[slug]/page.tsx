@@ -105,7 +105,7 @@ const PostDetailPage = async ({ params }: BlogPageProps) => {
             </div>
             <div className="mt-4">
               <Link
-                href={`/blogs/tags/${postPage.tagName}`}
+                href={`/tags/${postPage.tagName}`}
                 className="bg-zinc-600 text-zinc-100 px-2 rounded-full hover:bg-zinc-700"
               >
                 # {postPage.tagName}
