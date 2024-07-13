@@ -11,7 +11,6 @@ import MarkdownRender from "@/components/markdown-render";
 import CommentInput from "@/components/comment/comment-input";
 
 const lexand = Lexend({ subsets: ["latin"] });
-const baseURL = process.env.BASE_URL;
 
 export const revalidate = 60;
 
@@ -23,8 +22,7 @@ interface BlogPageProps {
 
 export const generateStaticParams = async () => {
   try {
-    const response = await fetch(`${baseURL}/api/posts`);
-    const posts: Post[] = await response.json();
+    const posts: Post[] = await getPublishedPosts();
     return posts.map((post) => ({
       slug: post.slug,
     }));
@@ -38,9 +36,7 @@ export const generateMetadata = async ({
   params,
 }: BlogPageProps): Promise<Metadata> => {
   try {
-    const slug = params.slug;
-    const response = await fetch(`${baseURL}/api/posts/${slug}`);
-    const postPage = await response.json();
+    const postPage = await getSingleBlogPost(params.slug);
     return {
       title: postPage.title,
       description: postPage.shortDesc,
