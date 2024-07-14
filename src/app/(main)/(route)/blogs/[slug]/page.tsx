@@ -37,7 +37,7 @@ export const generateMetadata = async ({
 }: BlogPageProps): Promise<Metadata> => {
   try {
     const postPage = await getSingleBlogPost(params.slug);
-    return {
+    const metadata = {
       title: postPage.title,
       description: postPage.shortDesc,
       openGraph: {
@@ -59,7 +59,10 @@ export const generateMetadata = async ({
       },
       robots: "index, follow",
     };
+    console.log("Generated metadata:", JSON.stringify(metadata, null, 2));
+    return metadata;
   } catch (error) {
+    console.error("Error generating metadata:", error);
     return {
       title: "Post not found",
       description: "The post you are looking for does not exist.",
