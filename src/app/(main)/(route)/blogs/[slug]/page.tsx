@@ -43,9 +43,9 @@ export const generateMetadata = async ({
       openGraph: {
         title: postPage.title,
         description: postPage.shortDesc,
-        type: "book",
+        type: "article",
         url: `${process.env.BASE_URL}/blogs/${postPage.slug}`,
-        releaseDate: new Date(postPage.createdAt).toISOString(),
+        publishedTime: postPage.createdAt,
         tags: postPage.tagName ? [postPage.tagName] : [],
         images: [
           {
